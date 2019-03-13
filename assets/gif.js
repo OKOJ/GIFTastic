@@ -13,7 +13,7 @@ for each string in the array.
 6. Add a form to your page takes the value from a user input box and adds it into your `topics`
 array.Then make a
 function call that takes each topic in the array remakes the buttons on the page.*/
-var winterSports = ["skiing", "snowboarding"];
+var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled", "biathlon", "figure skating", "ski jumping"];
 
 
 
@@ -32,7 +32,7 @@ for (var i = 0; i < winterSports.length; i++) {
 
 $(document).on("click", ".button-topic", function () {
     var topic = $(this).attr("data-topic");
-    console.log(topic); 
+    console.log(topic);
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=" + topic + "&limit=10";
 
     //query parametre api_key: q: limit:
