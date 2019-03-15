@@ -1,0 +1,27 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+button.button-topic{
+    width: 140px;
+    height: 30px;
+    font-size: 18px;
+    margin:10px;
+    font-family: 'Open Sans', sans-serif;
+}
+button.button-topic:active{
+    background-color:azure;
+}
+
+.image{
+    background-color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    margin: 15px;
+    padding: 2px 5px;
+    border:0.2px;
+    border-style:solid;
+    border-color: aliceblue;
+    width: fit-content;
+    height: flex;
+}
