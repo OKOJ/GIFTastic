@@ -65,12 +65,13 @@ $(document).on("click", ".button-topic", function () {
       sportsDiv.addClass("image");
       var p = $("<p>").text("Rating: " + response.data[i].rating);
       var sportsImage = $("<img>");
-
+     // var a= 
       sportsImage.attr({
         "src": response.data[i].images.fixed_height_still.url,
         "data-still": response.data[i].images.fixed_height_still.url,
         "data-animate": response.data[i].images.fixed_height_downsampled.url,
         "data-state": "still"
+        //"a.href":response.data[i].images.fixed_height_downsampled.url,
       });
       sportsImage.addClass("gif");
       sportsDiv.append(sportsImage);
