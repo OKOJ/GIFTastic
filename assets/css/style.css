@@ -1,5 +1,26 @@
 body{
+    
     font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    text-align: center;
+    font-weight: bold;
+}
+aside{
+    float: right;
+    margin:30px 55px 10px 10px;
+    height: 1800px;
+}
+#search-input{
+    width: 240px;
+    height: 30px;
+}
+#add-topic{
+    width: 140px;
+    height: 30px; 
+    margin:18px 0;
+    font-size: 18px;
 }
 
 button.button-topic{
@@ -10,11 +31,11 @@ button.button-topic{
     font-family: 'Open Sans', sans-serif;
 }
 button.button-topic:active{
-    background-color:azure;
+    background-color:rgb(225, 243, 243);
 }
 
 .image{
-    background-color: aliceblue;
+    background-color: #f0f0f7d0;
     font-family: 'Open Sans', sans-serif;
     float: left;
     margin: 15px;

@@ -13,7 +13,7 @@ for each string in the array.
 6. Add a form to your page takes the value from a user input box and adds it into your `topics`
 array.Then make a function call that takes each topic in the array remakes the buttons on the page.*/
 
-var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled", "biathlon", "figure skating", "ski jumping"];
+var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled","snowmobiling", "biathlon", "figure skating", "ski jumping"];
 
 function renderButtons() {
 
@@ -67,9 +67,9 @@ $(document).on("click", ".button-topic", function () {
       var sportsImage = $("<img>");
 
       sportsImage.attr({
-        "src": response.data[i].images.fixed_width_still.url,
-        "data-still": response.data[i].images.fixed_width_still.url,
-        "data-animate": response.data[i].images.fixed_height.url,
+        "src": response.data[i].images.fixed_height_still.url,
+        "data-still": response.data[i].images.fixed_height_still.url,
+        "data-animate": response.data[i].images.fixed_height_downsampled.url,
         "data-state": "still"
       });
       sportsImage.addClass("gif");
