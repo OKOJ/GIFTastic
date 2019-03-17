@@ -13,7 +13,7 @@ for each string in the array.
 6. Add a form to your page takes the value from a user input box and adds it into your `topics`
 array.Then make a function call that takes each topic in the array remakes the buttons on the page.*/
 
-var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled","snowmobiling", "biathlon", "figure skating", "ski jumping"];
+var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled", "snowmobiling", "biathlon", "figure skating", "ski jumping"];
 
 function renderButtons() {
 
@@ -63,21 +63,43 @@ $(document).on("click", ".button-topic", function () {
 
       var sportsDiv = $("<div>");
       sportsDiv.addClass("image");
-      var p = $("<p>").text("Rating: " + response.data[i].rating);
+      var p = $("<p>").text("Rating: "+ response.data[i].rating);
       var sportsImage = $("<img>");
-     // var a= 
       sportsImage.attr({
         "src": response.data[i].images.fixed_height_still.url,
         "data-still": response.data[i].images.fixed_height_still.url,
         "data-animate": response.data[i].images.fixed_height_downsampled.url,
         "data-state": "still"
-        //"a.href":response.data[i].images.fixed_height_downsampled.url,
       });
+
+      var iconFav = $("<input>");
+      iconFav.attr({
+        "type": "image",
+        "src": "http://chittagongit.com//images/favorite-icon/favorite-icon-23.jpg",
+        "alt": "Click me",
+        "width": 28,
+        "height": 28
+      });
+
+
+      var iconDownld = $("<input>");
+      iconDownld.attr({
+        "type": "image",
+        "src": "https://www.lua.org/images/downloadarrow.png",
+        "id": "download",
+        "width": 28,
+        "height": 28,
+      });
+
+
+      var pIcon = $("<p>").append(iconFav, iconDownld);
       sportsImage.addClass("gif");
       sportsDiv.append(sportsImage);
-      sportsDiv.prepend(p)
+      sportsDiv.append(p);
+      sportsDiv.append(pIcon);
       $("#gif-area").append(sportsDiv);
-    }
+    };
+
     $(".gif").on("click", function () {
       var state = $(this).attr("data-state");
       if (state === "still") {
@@ -93,6 +115,3 @@ $(document).on("click", ".button-topic", function () {
   });
   $("#gif-area").empty()
 });
-//
-//$("<img>").attr("data-still",response.data[i].images.fixed_width_still.url);
-//$("<img>").attr("data-animate",response.data[i].preview_gif.url);

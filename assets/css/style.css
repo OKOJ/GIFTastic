@@ -6,32 +6,43 @@ body{
 header{
     text-align: center;
     font-weight: bold;
+    font-size: 30px;
+    margin: auto;
 }
-aside{
-    float: right;
-    margin:30px 55px 10px 10px;
-    height: 1800px;
+
+h1{
+    margin: 0%;
+    text-align: center;
 }
+
+h3{
+    font-size: x-large;
+    margin: 10px 0px 5px 10px;
+}
+
 #search-input{
     width: 240px;
     height: 30px;
+    
 }
+
 #add-topic{
-    width: 140px;
-    height: 30px; 
+    width: 100px;
+    height: 35px; 
     margin:18px 0;
     font-size: 18px;
 }
 
 button.button-topic{
-    width: 140px;
+    width: 150px;
     height: 30px;
     font-size: 18px;
     margin:10px;
     font-family: 'Open Sans', sans-serif;
 }
+
 button.button-topic:active{
-    background-color:rgb(225, 243, 243);
+    background-color:rgba(108, 171, 223, 0.698);
 }
 
 .image{
@@ -43,6 +54,41 @@ button.button-topic:active{
     border:0.2px;
     border-style:solid;
     border-color: aliceblue;
-    width: fit-content;
+    width:flex;
     height: flex;
 }
+
+input{
+    margin: 0px ;
+}
+
+p{
+    margin: 1px;
+}
+
+/* Large devices (desktops, 856px and up)*/
+@media only screen and (max-width: 856px) {
+
+}
+
+/* Medium devices (tablets, 725px and up)*/
+@media only screen and (max-width: 725px) {
+
+}
+
+/* Small devices (landscape phones, 630px and up)*/
+@media only screen and (max-width: 630px) {
+
+}
+
+/* x-Small devices (landscape phones, 470x and up)*/
+@media only screen and (max-width: 470px) {
+
+}
+
+/* x-Small devices (landscape phones, 432x and up)*/
+@media only screen and (max-width: 435px) {
+}
+
+
+
