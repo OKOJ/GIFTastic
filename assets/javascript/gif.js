@@ -48,14 +48,14 @@ $(document).on("click", ".button-topic", function () {
   //console.log(topic);
   var api_key = "4ZCLxfuC8PLbhVQQWOnCB67ShuSWgBiL";
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + api_key + "&limit=10";
-//query parametre api_key: q: limit: rating:
+  //query parametre api_key: q: limit: rating:
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (response) {
     //console.log(response);
     for (var i = 0; i < response.data.length; i++) {
-//making divs to display gifs adding attributes for the animated and still data
+      //making divs to display gifs adding attributes for the animated and still data
       var sportsDiv = $("<div>");
       sportsDiv.addClass("image");
       var p = $("<p>").text("Rating: " + response.data[i].rating);
@@ -66,21 +66,28 @@ $(document).on("click", ".button-topic", function () {
         "data-animate": response.data[i].images.fixed_height_downsampled.url,
         "data-state": "still"
       });
-//making icons for favorite and download buttons
+
+      //making icons for favorite and download buttons
       var iconDownld = $("<a>").append("<img src='https://www.lua.org/images/downloadarrow.png' alt='heart' width='28' height='28'>");
       iconDownld.attr({
-        href:response.data[i].images.fixed_height_downsampled.url,
-        download:"gif",
+        href: response.data[i].images.fixed_height_downsampled.url,
+        download: "gif",
       });
+
       var iconFav = $("<a>").append("<img src='https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/favourite512x512.png' alt='heart' width='28' height='28'>");
       iconFav.attr({
-        href:"",
-        load:"",
+        href: "",
+        load: "",
       });
-//function  to add their favorite gifs to a favorites section
-
-//
-//attaching rating and icons to the each gif
+      //function  to add their favorite gifs to a favorites section
+      //when icon clicked
+      //save bookmark, by grabbing a value of a gif 
+      //set up a localStorage
+      //function to get bookmarks from localStorage
+      //display in a favorite section
+      //make a button to clear the bookmarks
+      //
+      //attaching rating and icons to the each gif
       var pIcon = $("<p>").append(iconFav, iconDownld);
       sportsImage.addClass("gif");
       sportsDiv.append(sportsImage);
@@ -88,7 +95,7 @@ $(document).on("click", ".button-topic", function () {
       sportsDiv.append(pIcon);
       $("#gif-area").append(sportsDiv);
     };
-//gif are still, making gifs animated or still, if you click on it
+    //gif are still, making gifs animated or still, if you click on it
     $(".gif").on("click", function () {
       var state = $(this).attr("data-state");
       if (state === "still") {

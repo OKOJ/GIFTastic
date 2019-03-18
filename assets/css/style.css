@@ -73,18 +73,8 @@ button.button-topic:active {
 p {
     margin: 1px;
 }
-
-/* Large devices (desktops, 856px and up)*/
-@media only screen and (max-width: 856px) {}
-
-/* Medium devices (tablets, 725px and up)*/
-@media only screen and (max-width: 725px) {}
-
-/* Small devices (landscape phones, 630px and up)*/
-@media only screen and (max-width: 630px) {}
-
-/* x-Small devices (landscape phones, 470x and up)*/
-@media only screen and (max-width: 470px) {}
-
-/* x-Small devices (landscape phones, 432x and up)*/
-@media only screen and (max-width: 435px) {}
+.col-4{
+    position: relative;
+   
+   
+}
