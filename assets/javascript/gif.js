@@ -53,7 +53,7 @@ $(document).on("click", ".button-topic", function () {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response);
+    //console.log(response);
     for (var i = 0; i < response.data.length; i++) {
 //making divs to display gifs adding attributes for the animated and still data
       var sportsDiv = $("<div>");
@@ -70,7 +70,7 @@ $(document).on("click", ".button-topic", function () {
       var iconFav = $("<input>");
       iconFav.attr({
         "type": "image",
-        "src": "http://chittagongit.com//images/favorite-icon/favorite-icon-23.jpg",
+        "src": "https://www.searchpng.com/wp-content/uploads/2019/02/favorite-icon-PNG.png",
         "alt": "Click me",
         "width": 28,
         "height": 28
