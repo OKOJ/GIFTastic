@@ -4,33 +4,44 @@ body{
 }
 
 header{
-    text-align: center;
+    
     font-weight: bold;
-    font-size: 30px;
+    font-size: 75px;
     margin: auto;
 }
 
 h1{
-    margin: 0%;
+    margin: 1%;
     text-align: center;
+    
 }
 
 h3{
+    font-weight: bold;
     font-size: x-large;
     margin: 10px 0px 5px 10px;
+}
+form{
+    margin-left: 55px;
 }
 
 #search-input{
     width: 240px;
     height: 30px;
+    margin: 10px;
     
 }
 
 #add-topic{
-    width: 100px;
+    width: 150px;
     height: 35px; 
     margin:18px 0;
     font-size: 18px;
+}
+
+#buttons-view{
+    padding: 10px;
+    margin: 0px 0px 0px 45px;
 }
 
 button.button-topic{
@@ -56,10 +67,6 @@ button.button-topic:active{
     border-color: aliceblue;
     width:flex;
     height: flex;
-}
-
-input{
-    margin: 0px ;
 }
 
 p{

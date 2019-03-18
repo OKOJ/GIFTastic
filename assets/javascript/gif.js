@@ -67,26 +67,17 @@ $(document).on("click", ".button-topic", function () {
         "data-state": "still"
       });
 //making icons for favorite and download buttons
-      var iconFav = $("<input>");
-      iconFav.attr({
-        "type": "image",
-        "src": "https://www.searchpng.com/wp-content/uploads/2019/02/favorite-icon-PNG.png",
-        "alt": "Click me",
-        "width": 28,
-        "height": 28
-      });
-//function to download gif
-
-//
-      var iconDownld = $("<input>");
+      var iconDownld = $("<a>").append("<img src='https://www.lua.org/images/downloadarrow.png' alt='heart' width='28' height='28'>");
       iconDownld.attr({
-        "type": "image",
-        "src": "https://www.lua.org/images/downloadarrow.png",
-        "id": "download",
-        "width": 28,
-        "height": 28,
+        href:response.data[i].images.fixed_height_downsampled.url,
+        download:"gif",
       });
-//function to put to add their favorite gifs to a favorites section
+      var iconFav = $("<a>").append("<img src='https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/favourite512x512.png' alt='heart' width='28' height='28'>");
+      iconFav.attr({
+        href:"",
+        load:"",
+      });
+//function  to add their favorite gifs to a favorites section
 
 //
 //attaching rating and icons to the each gif
