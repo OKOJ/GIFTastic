@@ -14,7 +14,7 @@ for each string in the array.
 array.Then make a function call that takes each topic in the array remakes the buttons on the page.*/
 
 var winterSports = ["skiing", "snowboarding", "curling", "ice hockey", "bobsled", "snowmobiling", "biathlon", "figure skating", "ski jumping"];
-
+// making buttons with a topic theme
 function renderButtons() {
 
   $("#buttons-view").empty();
@@ -33,37 +33,32 @@ function renderButtons() {
   };
 };
 renderButtons();
-
+//search input and add button , when new search is added new button will be made 
 $("#add-topic").on("click", function (event) {
   event.preventDefault();
   var search = $("#search-input").val().trim();
   winterSports.push(search);
   renderButtons();
   $("#search-input").val("")
-
 });
-
+//getting the requested info from the API
 $(document).on("click", ".button-topic", function () {
 
-  // renderButtons();
   var topic = $(this).attr("data-topic");
-
-  console.log(topic);
+  //console.log(topic);
   var api_key = "4ZCLxfuC8PLbhVQQWOnCB67ShuSWgBiL";
-
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + api_key + "&limit=10";
-  //query parametre api_key: q: limit: rating:
-
+//query parametre api_key: q: limit: rating:
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (response) {
     console.log(response);
     for (var i = 0; i < response.data.length; i++) {
-
+//making divs to display gifs adding attributes for the animated and still data
       var sportsDiv = $("<div>");
       sportsDiv.addClass("image");
-      var p = $("<p>").text("Rating: "+ response.data[i].rating);
+      var p = $("<p>").text("Rating: " + response.data[i].rating);
       var sportsImage = $("<img>");
       sportsImage.attr({
         "src": response.data[i].images.fixed_height_still.url,
@@ -71,7 +66,7 @@ $(document).on("click", ".button-topic", function () {
         "data-animate": response.data[i].images.fixed_height_downsampled.url,
         "data-state": "still"
       });
-
+//making icons for favorite and download buttons
       var iconFav = $("<input>");
       iconFav.attr({
         "type": "image",
@@ -80,8 +75,9 @@ $(document).on("click", ".button-topic", function () {
         "width": 28,
         "height": 28
       });
+//function to download gif
 
-
+//
       var iconDownld = $("<input>");
       iconDownld.attr({
         "type": "image",
@@ -90,8 +86,10 @@ $(document).on("click", ".button-topic", function () {
         "width": 28,
         "height": 28,
       });
+//function to put to add their favorite gifs to a favorites section
 
-
+//
+//attaching rating and icons to the each gif
       var pIcon = $("<p>").append(iconFav, iconDownld);
       sportsImage.addClass("gif");
       sportsDiv.append(sportsImage);
@@ -99,7 +97,7 @@ $(document).on("click", ".button-topic", function () {
       sportsDiv.append(pIcon);
       $("#gif-area").append(sportsDiv);
     };
-
+//gif are still, making gifs animated or still, if you click on it
     $(".gif").on("click", function () {
       var state = $(this).attr("data-state");
       if (state === "still") {
@@ -110,8 +108,6 @@ $(document).on("click", ".button-topic", function () {
         $(this).attr("data-state", "still");
       }
     });
-
-
   });
   $("#gif-area").empty()
 });
