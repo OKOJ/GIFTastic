@@ -1,101 +1,90 @@
-body{
-    
+body {
+
     font-family: 'Open Sans', sans-serif;
 }
 
-header{
-    
+header {
+
     font-weight: bold;
     font-size: 75px;
     margin: auto;
 }
 
-h1{
+h1 {
     margin: 1%;
     text-align: center;
-    
+
 }
 
-h3{
+h3 {
     font-weight: bold;
     font-size: x-large;
     margin: 10px 0px 5px 10px;
 }
-form{
+
+form {
     margin-left: 55px;
 }
 
-#search-input{
+#search-input {
     width: 240px;
     height: 30px;
     margin: 10px;
-    
+
 }
 
-#add-topic{
+#add-topic {
     width: 150px;
-    height: 35px; 
-    margin:18px 0;
+    height: 35px;
+    margin: 18px 0;
     font-size: 18px;
 }
 
-#buttons-view{
+#buttons-view {
     padding: 10px;
     margin: 0px 0px 0px 45px;
 }
 
-button.button-topic{
+button.button-topic {
     width: 150px;
     height: 30px;
     font-size: 18px;
-    margin:10px;
+    margin: 10px;
     font-family: 'Open Sans', sans-serif;
 }
 
-button.button-topic:active{
-    background-color:rgba(108, 171, 223, 0.698);
+button.button-topic:active {
+    background-color: rgba(108, 171, 223, 0.698);
 }
 
-.image{
+.image {
     background-color: #f0f0f7a6;
     font-family: 'Open Sans', sans-serif;
     float: left;
     margin: 15px;
     padding: 2px 5px;
-    border:0.2px;
-    border-style:solid;
+    border: 0.2px;
+    border-style: solid;
     border-color: aliceblue;
-    width:flex;
+    width: flex;
     height: flex;
 }
 
-p{
+p {
     margin: 1px;
 }
 
 /* Large devices (desktops, 856px and up)*/
-@media only screen and (max-width: 856px) {
-
-}
+@media only screen and (max-width: 856px) {}
 
 /* Medium devices (tablets, 725px and up)*/
-@media only screen and (max-width: 725px) {
-
-}
+@media only screen and (max-width: 725px) {}
 
 /* Small devices (landscape phones, 630px and up)*/
-@media only screen and (max-width: 630px) {
-
-}
+@media only screen and (max-width: 630px) {}
 
 /* x-Small devices (landscape phones, 470x and up)*/
-@media only screen and (max-width: 470px) {
-
-}
+@media only screen and (max-width: 470px) {}
 
 /* x-Small devices (landscape phones, 432x and up)*/
-@media only screen and (max-width: 435px) {
-}
-
-
-
+@media only screen and (max-width: 435px) {}
